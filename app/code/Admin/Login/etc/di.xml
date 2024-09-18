@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Admin\Login\Api\LoginInterface" type="Admin\Login\Model\Login" />
+    <type name="Admin\Login\Model\Login">
+        <arguments>
+            <argument name="adminTokenService" xsi:type="object">Magento\Integration\Api\AdminTokenServiceInterface</argument>
+            <argument name="accountManagement" xsi:type="object">Magento\Customer\Api\AccountManagementInterface</argument>
+            <argument name="customerRepository" xsi:type="object">Magento\Customer\Api\CustomerRepositoryInterface</argument>
+        </arguments>
+    </type>
+</config>
